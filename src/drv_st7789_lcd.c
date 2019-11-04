@@ -12,8 +12,8 @@
 
 #include <rtdevice.h>
 #include "drv_spi.h"
-#include "drv_lcd.h"
-#include "drv_lcd_font.h"
+#include "drv_st7789_lcd.h"
+#include "drv_st7789_lcd_font.h"
 
 #define DBG_SECTION_NAME    "LCD"
 #define DBG_COLOR
