@@ -1,9 +1,13 @@
 
 from building import *
+Import('rtconfig')
+src   = []
+cwd   = GetCurrentDir()
 
-cwd     = GetCurrentDir()
-src     = Glob('*.c') + Glob('*.cpp')
-path    = [cwd]
+if GetDepend('PKG_USING_ST7789'):
+    src += Glob('src/drv_lcd.c')
+
+path  = [cwd + '/inc']
 
 group = DefineGroup('st7789', src, depend = ['PKG_USING_ST7789'], CPPPATH = path)
 
