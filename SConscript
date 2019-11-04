@@ -5,7 +5,7 @@ src   = []
 cwd   = GetCurrentDir()
 
 if GetDepend('PKG_USING_ST7789'):
-    src += Glob('src/drv_lcd.c')
+    src += Glob('src/drv_st7789_lcd.c')
 
 path  = [cwd + '/inc']
 
